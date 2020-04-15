@@ -1,7 +1,7 @@
 # README
-#DB設計
+# DB設計
 
-##user_table
+## user_table
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
