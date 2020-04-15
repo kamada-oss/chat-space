@@ -1,4 +1,4 @@
-# README
+
 # DB設計
 
 ## user_table
@@ -11,7 +11,7 @@
 ### Association
 - has_many :groups, through: members
 
-##groupテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -20,7 +20,7 @@
 - has_many :users, through: members
 - has_many : messages
 
-##Messageテーブル
+## Messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|string|null: false|
@@ -32,7 +32,7 @@
 - belongs_to :user
 - belongs_to :group
 
-##Membersテーブル
+## Membersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
