@@ -1,7 +1,7 @@
 
 # DB設計
 
-## user_table
+## userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
@@ -10,6 +10,8 @@
 
 ### Association
 - has_many :groups, through: members
+- has_many :members
+- has_many :messages
 
 ## groupテーブル
 |Column|Type|Options|
@@ -18,6 +20,7 @@
 
 ### Association
 - has_many :users, through: members
+- has_many :members
 - has_many : messages
 
 ## Messageテーブル
