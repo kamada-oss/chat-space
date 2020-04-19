@@ -1,0 +1,30 @@
+.chat-main
+  -# ヘッダー
+  .chat-main__group-info
+    .chat-main__group-info--name
+      test
+    .chat-main__group-info--members
+      Member：kamada
+    =link_to " Edit", "#", class: 'chat-main__group-info--edit-btn'
+  -# チャット
+  .chat-main__message-list
+    -# １つ目のメッセージ
+    .chat-main__message-list--member-name
+      kamada  
+      %span.chat-main__message-list--time 2020/04/18(Sun) 01:10:12
+    .chat-main__message-list--text
+      おはよう!!
+    -# ２つ目のメッセージ
+    .chat-main__message-list--member-name
+      kamada  
+      %span{class: "chat-main__message-list--time"} 2020/04/18(Sun) 03:10:12
+    .chat-main__message-list--text
+      今日も頑張ります！
+  -# フォーム
+  .chat-main__message-form
+    .input-box
+      %input{type: "text", class: "input-box__message", placeholder: "type a message"}
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+        %input{type: "file", calss: "input-box__image--file-field"}
+    %input{type: "submit", value: "Send", class: "submit-btn"}
