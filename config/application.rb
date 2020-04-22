@@ -14,5 +14,7 @@ module ChatSpace
       g.helper false
       g.test_framework false
     end
+    # 日本語を適用
+    config.i18n.default_locale = :ja
   end
 end
