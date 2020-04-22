@@ -12,4 +12,9 @@
   -# グループリスト
   .side-bar__group-list
     - @groups.each do |group|
-      = render partial: "group", locals: {group: group}
+      .group-items
+        = link_to group_messages_path(group) do
+          .group-items__name
+            = group.name
+          .group-items__message
+            = group.show_last_message

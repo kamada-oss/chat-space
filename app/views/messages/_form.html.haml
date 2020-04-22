@@ -1,0 +1,14 @@
+= form_for [group, message do |f|
+  -if message.errors.any?  
+    .chat-message-form__errors    
+      %h2= "#{message.errors.full_messages.count}件のエラーが発生しました"
+      %ul
+        - message.errors.full_messages.each do |message|
+          %li= message
+  .chat-main__message-form
+    .input-box
+      = f.text_field :text, class: "input-box__message", placeholder: "type a message"
+      = f.label :image, class: "input-box__image"
+        = icon('fas', 'image')
+        = f.file_field :image, calss: "input-box__image--file-field"
+    = f.submit "Send", class: "submit-btn"
