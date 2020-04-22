@@ -57,7 +57,10 @@
       width: 260px;
       margin: auto;
       margin-bottom: 40px;
-      color: $font-white;
+      a {
+        text-decoration: none;
+        color: $font-white;
+      }
       // グループ名
       &__name{
         font-size: 15px;
