@@ -31,6 +31,8 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
+gem 'carrierwave'
+gem "mini_magick"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

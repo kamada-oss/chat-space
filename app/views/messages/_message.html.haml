@@ -1,0 +1,8 @@
+.chat-main__message-list--member-name
+  = message.user.nickname 
+  %span.chat-main__message-list--time 
+    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+- if message.text.present?
+  .chat-main__message-list--text
+    = message.text
+= image_tag message.image.url if message.image.present?
