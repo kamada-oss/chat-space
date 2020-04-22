@@ -5,21 +5,11 @@
       .top-items__name
         = current_user.nickname
       .top-items_btn
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('far', 'edit', class: "top-items__btn--edit")
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "top-items__btn--cog")
   -# グループリスト
   .side-bar__group-list
-    -# １つ目のグループ
-    .group-items
-      .group-items__name
-        techcamp
-      .group-items__message
-        まだメッセージがありません
-    -# ２つ目のグループ
-    .group-items
-      .group-items__name
-        test
-      .group-items__message
-        こんばんは！
+    - @groups.each do |group|
+      = render partial: "group", locals: {group: group}
