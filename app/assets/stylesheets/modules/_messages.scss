@@ -120,6 +120,7 @@
     background-color: #fafafa;
     padding-left: 40px;
     padding-top: 35px;
+    overflow: scroll;
     // 投稿者
     &--member-name{
       font-size:16px;
@@ -151,18 +152,21 @@
       width: calc(100% - 195px);
       margin-left: 40px;
       background-color: $font-white; 
+      display: flex;
       position: relative;
       // テキスト入力フォーム
       &__message{
         padding-left: 10px;
         height: 50px;
-        width: 100%
+        width: calc(100% - 40px);
+        border-style: none;
       }
       // 画像選択フォーム
       &__image{
         position: absolute;
         right: 10px;
         font-size: 2em;
+        cursor: pointer;
         input{
           display: none;
         }
