@@ -7,4 +7,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   validates :nickname, presence: true
+
+
+  def self.search(input, id)
+    return nil if input == ""
+    User.where(['nickname LIKE ?', "%#{input}%"] ).where.not(id: id).limit(10)
+  end
 end
